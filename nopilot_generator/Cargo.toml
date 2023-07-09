@@ -1,0 +1,15 @@
+[package]
+name = "nopilot_generator"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "nopilot_generator"
+path = "src/lib.rs"
+proc-macro = true
+
+[dependencies]
+reqwest = { version = "*", features = ["json", "blocking"] }
+syn = { version = "*", features = ["extra-traits"] }
